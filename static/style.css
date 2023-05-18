@@ -52,3 +52,11 @@ img {
 .navbar {
   background-color: red;
 }
+
+.zoom {
+  transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+  transform: scale(1.3);
+}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} GALLERY {% endblock %}
+{% block favicon %}
+    <link rel="shortcut icon" href="static/photos/picture.png" type="image/x-icon">
+{% endblock %}
+  {% block content %}
+  <h1>Gallery</h1>
+
+  <div class="gallery">
+    <div class="row">
+      <div class="column">
+        <img src="{{ url_for('static', filename='photos/monkey.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+      <div class="column">
+        <img src="{{ url_for('static', filename='photos/p1.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+      <div class="column">
+         <img src="{{ url_for('static', filename='photos/p2.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+         <img src="{{ url_for('static', filename='photos/p4.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+      <div class="column">
+         <img src="{{ url_for('static', filename='photos/p5.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+      <div class="column">
+         <img src="{{ url_for('static', filename='photos/p6.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="{{ url_for('static', filename='photos/p7.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+      <div class="column">
+         <img src="{{ url_for('static', filename='photos/p8.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+      <div class="column">
+         <img src="{{ url_for('static', filename='photos/p9.jpg') }}" alt="<3" data-lightbox="gallery" onclick="openPhoto(event)" class="img-thumbnail zoom"><br>
+      </div>
+    </div>
+  </div>
+
+ <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+ <script src="{{ url_for('static', filename='js.js') }}"></script>
+  {% endblock %}
+
+

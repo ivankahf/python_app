@@ -1,11 +1,14 @@
-function openPhoto(element) {
+ function openPhoto(event) {
+            event.preventDefault();
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            var imgSrc = event.target.getAttribute("src");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
 
-  var src = element.src;
-
-
-  var modal = new bootstrap.Modal(document.getElementById('photoModal'));
-  var modalImage = document.getElementById('modalImage');
-  modalImage.src = src;
-
-  modal.show();
-}
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        };
